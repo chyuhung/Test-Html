@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+     <title>Copy text</title>
+    </head>
+    <body>
+
+    <div class="text">
+      <textarea id="input_01">text01</textarea>
+      <button onclick="copyText(input_01)">copy</button>
+    </div>
+    <div class="text">
+      <textarea id="input_02">text02</textarea>
+      <button onclick="copyText(input_02)">copy</button>
+    </div>
+
+    <div class="text">
+      <textarea id="input_test"></textarea>
+    </div>
+    </body>
+
+    <script>
+    function copyText(input) {
+      input.select(); // 选中文本
+      document.execCommand("copy"); // 执行浏览器复制命令
+      alert("复制成功");
+    }
+    </script>
+</html>
